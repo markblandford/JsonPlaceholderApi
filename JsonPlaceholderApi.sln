@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPlaceholderApi", "JsonPlaceholderApi\JsonPlaceholderApi.csproj", "{0716B62C-A623-437E-958F-DA129D9B7857}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPlaceholderApi.Tests", "JsonPlaceholderApi.Tests\JsonPlaceholderApi.Tests.csproj", "{3BF586E1-C80C-4AB3-9912-F23A4CC9E992}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0716B62C-A623-437E-958F-DA129D9B7857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0716B62C-A623-437E-958F-DA129D9B7857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0716B62C-A623-437E-958F-DA129D9B7857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0716B62C-A623-437E-958F-DA129D9B7857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF586E1-C80C-4AB3-9912-F23A4CC9E992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF586E1-C80C-4AB3-9912-F23A4CC9E992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF586E1-C80C-4AB3-9912-F23A4CC9E992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF586E1-C80C-4AB3-9912-F23A4CC9E992}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
