@@ -4,6 +4,6 @@ namespace JsonPlaceholderApi.DataAccess.Api
 {
     public interface IApiClient
     {
-        Task<TResult> GetAsync<TResult>(string url, JsonNamingPolicy? jsonNamingPolicy = null);
+        Task<TResult> GetAsync<TResult>(string url, JsonSerializerOptions? jsonSerializerOptions = null);
     }
 }

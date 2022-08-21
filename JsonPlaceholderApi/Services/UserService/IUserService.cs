@@ -11,7 +11,7 @@ namespace JsonPlaceholderApi.Services.UserService
 
         /// <summary> Get the user details. </summary>
         /// <param name="id"> The id of the user. </param>
-        /// <returns> The User. </returns>
-        public Task<User> GetUser(int id);
+        /// <returns> The User or null if not found. </returns>
+        public Task<User?> GetUser(string id);
     }
 }

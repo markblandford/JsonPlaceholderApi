@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using System.Text.Json;
 using NSubstitute;
 using Xunit;
+using FluentAssertions;
 using JsonPlaceholderApi.DataAccess.Api;
 using JsonPlaceholderApi.Models;
 using JsonPlaceholderApi.Services.UserService;
-using JsonPlaceholderApi.DataAccess.Api.NamingPolicies;
 
 namespace JsonPlaceholderApi.Tests.Services
 {
@@ -32,12 +33,35 @@ namespace JsonPlaceholderApi.Tests.Services
             };
             apiClient.GetAsync<IList<User>>(
                 Arg.Any<string>(),
-                Arg.Any<JsonPlaceholderNamingPolicy>()
+                Arg.Any<JsonSerializerOptions>()
             ).Returns(expectedResults);
 
             IList<User> result = await userService.GetUser();
 
-            Assert.Equal(expectedResults, result);
+            result.Should().BeSameAs(expectedResults);
+        }
+
+        [Fact]
+        public async void GetUser_HasIdParameter_ReturnsSingleUserWithTheGivenId()
+        {
+            string id = "1";
+
+            User expected = Substitute.For<User>();
+            expected.Id = int.Parse(id);
+
+            IList<User> allUsers = new[]
+            {
+                Substitute.For<User>(),
+                Substitute.For<User>(),
+                expected,
+                Substitute.For<User>(),
+            };
+
+            userService.GetUser().Returns(allUsers);
+
+            User result = await userService.GetUser(id);
+
+            result.Should().BeSameAs(expected);
         }
     }
 }
