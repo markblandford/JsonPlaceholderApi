@@ -1,7 +1,5 @@
 namespace JsonPlaceholderApi.Models
 {
-    using System.Text.Json.Serialization;
-
     public class Address
     {
         public string Street { get; set; }
@@ -12,7 +10,6 @@ namespace JsonPlaceholderApi.Models
 
         public string ZipCode { get; set; }
 
-        [JsonPropertyName("geo")]
         public Coordinates Coordinates { get; set; }
     }
 }

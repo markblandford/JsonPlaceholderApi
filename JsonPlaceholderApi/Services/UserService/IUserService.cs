@@ -1,8 +1,7 @@
+using JsonPlaceholderApi.Models;
+
 namespace JsonPlaceholderApi.Services.UserService
 {
-  using JsonPlaceholderApi.DataAccess.Api;
-  using JsonPlaceholderApi.Models;
-
     /// <summary> User Service. </summary>
     public interface IUserService
     {
